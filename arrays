@@ -1,0 +1,90 @@
+#include<stdio.h>
+#define size_arr 5
+int main()
+{
+    char arr[]={'r','a','g','h','u'};
+    int i;
+    printf("base address of char arr is: %p\n",&arr);
+    
+    int no_ele=sizeof(arr)/sizeof(char);//calculate the size manually
+    printf("no. of elements in an array :%d\n",no_ele);//printing size of an array
+    printf("address of an array:%p %p\n",arr+0,arr[1]);//printing address of an array
+    printf("address of first element %p\n value at index 0 %c\n",arr+0,arr[0]);//printing address and value of the element in the array
+
+    printf("address of an array:%p %p\n",arr,arr[1]);//printing address of an array
+    printf("address of second element %p\n value at index 1 %c\n",arr+1,arr[1]);//printing address and value of the element in the array
+
+    printf("address of an array:%p %p\n",arr+0,arr[1]);//printing address of an array
+    printf("address of third element %p\n value at index 2 %c\n",arr+2,arr[2]);//printing address and value of the element in the array
+
+    printf("address of an array:%p %p\n",arr+0,arr[1]);//printing address of an array
+    printf("address of fouth element %p\n value at index 4 %c\n",arr+3,arr[3]);//printing address and value of the element in the array
+
+    printf("address of an array:%p %p\n",arr+0,arr[1]);//printing address of an array
+    printf("address of fifth element %p\n value at index 5 %c\n",arr+4,arr[4]);//printing address and value of the element in the array
+
+    char ravi[] ={'r','a','g','h','u'};//initialization of first method in char type
+    /*int i;//declaration of int data type for loop iteration*/
+    for(i=0;i<5;i++)
+    {
+        printf("the values with in the index of %d is %c\n",i,arr[i]);//by using FOR loop, elements in the array are printed
+    }
+    int raghu[5];//initialization of second method in int type
+    arr[0]=1;
+    arr[1]=20;
+    arr[2]=3;
+    arr[3]=34;
+    arr[4]=10;
+    /*int i;//declaration of int type for loop iteration*/
+    for(i=0;i<5;i++)
+    {
+        printf("the values with in the index of %d is %d\n",i,arr[i]);//by using FOR loop, elements in the array are printed
+    }
+        int rrr[] ={1,20,3,34,10};//initialization of third method in char type
+    /*int i;//declaration of int data type for loop iteration*/
+    for(i=0;i<size_arr;i++)
+    {
+        printf("the values with in the index of %d is %d\n",i,arr[i]);//by using FOR loop, elements in the array are printed
+    }
+
+    return 0;
+    
+    
+}
+
+Output:
+base address of char arr is: 0x7ffc291b2a9e
+no. of elements in an array :5
+address of an array:0x7ffc291b2a9e 0x61
+address of first element 0x7ffc291b2a9e
+ value at index 0 r
+address of an array:0x7ffc291b2a9e 0x61
+address of second element 0x7ffc291b2a9f
+ value at index 1 a
+address of an array:0x7ffc291b2a9e 0x61
+address of third element 0x7ffc291b2aa0
+ value at index 2 g
+address of an array:0x7ffc291b2a9e 0x61
+address of fouth element 0x7ffc291b2aa1
+ value at index 4 h
+address of an array:0x7ffc291b2a9e 0x61
+address of fifth element 0x7ffc291b2aa2
+ value at index 5 u
+ 
+the values with in the index of 0 is r
+the values with in the index of 1 is a
+the values with in the index of 2 is g
+the values with in the index of 3 is h
+the values with in the index of 4 is u
+
+the values with in the index of 0 is 1
+the values with in the index of 1 is 20
+the values with in the index of 2 is 3
+the values with in the index of 3 is 34
+the values with in the index of 4 is 10
+
+the values with in the index of 0 is 1
+the values with in the index of 1 is 20
+the values with in the index of 2 is 3
+the values with in the index of 3 is 34
+the values with in the index of 4 is 10
