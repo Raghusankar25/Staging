@@ -1,0 +1,13 @@
+#include<stdio.h>//header file
+int main()//execution starts from here
+{ 
+    char arr[5]={'k','a','v','y','a'};//initialisation of array in char data type
+    int i=0; //initialisation of int data type  
+    while(i<5)//loop condition
+    {    
+        
+        printf("The element of %dth index is %c\n",i,arr[i]);
+        i++;//incrementing of i value
+    } 
+    return 0;
+}
