@@ -1,0 +1,29 @@
+#include <stdio.h>  
+int main()          
+{
+    int a[]={1000,20,999,2525,50};  
+    int max=a[0];           
+    int i;              
+    for(i=0;i<5;i++)         //loop to iterate over array
+    {
+        if(a[i]>max)        //if array elements greater than max
+        {
+            max=a[i];       //assign  value with max
+        }
+    }
+    
+    printf("Largest element in the array is:%d\n",max); //printing largest element in the array
+    int sec_max=a[0];       //assign first index value to sec_max
+      for(i=0;i<5;i++)  
+    {
+        if(a[i]>sec_max&&a[i]!=max)  //if array elements greater than sec_max and array element not equal to max value
+        {
+            sec_max=a[i];   
+        }
+    }
+     printf("Second largest element in the array is:%d",sec_max);  //printing second largest element in the array
+
+}
+output:
+Largest element in the array is:2525
+Second largest element in the array is:1000
