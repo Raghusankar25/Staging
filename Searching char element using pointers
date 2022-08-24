@@ -1,0 +1,21 @@
+#include <stdio.h> 
+# define LEN_ARR 5 
+int main()    
+{
+   char arr[]={'r','a','g','h','u'};  
+   char temp;  
+   char *ptr=&temp;  //pointer pointing to temp variable
+   printf("Enter a character to be search:"); 
+   scanf("%c",&temp);  
+   for(int i=0;i<LEN_ARR;i++) //for loop to iterate over array
+     {
+       if(arr[i]==*ptr)  // given array element is equal to the  pointer value
+       {
+       printf("Value found at index:%d",i);//printing the position of array of the searched element
+       }
+}
+    return 0; 
+}
+Output:
+Enter a character to be search:g
+Value found at index:2
