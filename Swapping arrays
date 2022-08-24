@@ -1,0 +1,26 @@
+#include <stdio.h>
+# define LEN_ARR 5  
+int main()  
+{
+   int arr[]={10,20,30,40,50}; //intializing integer array
+   int *ptr=arr;  //pointer pointing to an  array
+   int temp;      //declaring a integer variable
+   printf("Values before swapping:"); //priting message
+   for(int i=0;i<LEN_ARR;i++)  //for loop to iterate over the array
+   {
+   printf("%d ",ptr[i]);  //printing the array elements using pointers
+   }
+   for(int i=0;i<LEN_ARR/2;i++) //for loop to iterate over the array  2 times
+   {
+   temp=ptr[i];  //storing the ith index value in temp using pointer
+   ptr[i]=ptr[LEN_ARR-(i+1)];  //storing the len-(i+1) index value in ith index using pointer
+   ptr[LEN_ARR-(i+1)]=temp;    //storing temp value in len-(i+1) index using pointer
+   }
+   printf("\nValues after swapping:"); //priting message
+   for(int i=0;i<LEN_ARR;i++)  //for loop to iterate over the array
+   printf("%d ",ptr[i]);    //priting the values after swapping
+    return 0;  //return type
+    }    
+Output:
+Values before swapping:10 20 30 40 50 
+Values after swapping:50 40 30 20 10 
