@@ -1,0 +1,28 @@
+#include <stdio.h>    
+int main()    
+{    
+    int arr1[] = {1, 2, 3, 4, 5}; //Initialize array     
+  int length = sizeof(arr1)/sizeof(arr1[0]);//Calculate length of array arr1    
+  int arr2[length];//Create another array arr2 with the size of arr1.    
+  for (int i = 0; i < length; i++)  //Copying all elements of one array into another    
+    {
+        arr2[i] = arr1[i];     
+    }         
+    printf("Elements of original array: \n"); //Displaying elements of array arr1     
+   
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr1[i]);    
+    }        
+    printf("\n");    
+    printf("Elements of new array: \n"); //Displaying elements of array arr2     
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr2[i]);    
+    }    
+    return 0;    
+} 
+
+Output:
+Elements of original array
+ 10 20 30 40 50 
+Elements of new array:
+10 20 30 40 50
