@@ -1,0 +1,126 @@
+#include<stdio.h>
+#define N 5
+int stack [5];
+int top = -1;
+void push()
+{
+    int x;
+    printf("enter data:");
+    scanf("%d",&x);
+    if(top==(N-1))
+    {
+        printf("stack overflow");
+    }
+else
+{
+    top++;
+    stack[top]=x;
+}
+}
+void pop()
+{
+    int item;
+    if(top==-1)
+    {
+        printf("stack empty");
+    }
+    else
+    {
+        item = stack[top];
+        top--;
+        printf("%d", item);
+    }
+}
+void peek()
+{
+    if(top==-1)
+    {
+        printf("stcak is empty");
+    }
+    else
+    {
+        printf("%d",stack[top]);
+    }
+}
+void display()
+{
+    int i;
+    for(i=top;i>=0;i--)
+    {
+        printf("%d", stack[i]);
+    }
+}
+void main()
+{
+    int ch;
+    do{
+        printf("\nenter choice:\n 1:push\n 2:pop\n 3:peek\n 4.display\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1 : push();
+                    break;
+            case 2 : pop();
+                    break;
+            case 3 : peek();
+                    break;
+            case 4 : display();
+                    break;
+            default : printf("Invalid choice");
+        }
+    }
+    while(ch!=0);
+}
+Output:
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+1
+enter data:10
+
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+1
+enter data:20
+
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+1
+enter data:30
+
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+2
+30
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+3
+20
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+4
+2010
+enter choice:
+ 1:push
+ 2:pop
+ 3:peek
+ 4.display
+0
+Invalid choice
